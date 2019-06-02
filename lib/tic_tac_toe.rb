@@ -20,8 +20,13 @@ def input_to_index(user_input)
   return index
 end
 
+<<<<<<< HEAD
 def move(board, index, player)
   board[index] = player
+=======
+def move(board, index, turn)
+  board[index] = turn
+>>>>>>> 95e5e4506411bfa6c63bb7a71819dd635d0ae97e
 end
 
 def position_taken?(board, index)
@@ -45,12 +50,17 @@ def turn(board)
   user_input = gets.strip
   index = input_to_index(user_input)
   if valid_move?(board, index)
+<<<<<<< HEAD
     player = current_player(board)
     move(board, index, player)
+=======
+    move(board, index, turn)
+>>>>>>> 95e5e4506411bfa6c63bb7a71819dd635d0ae97e
     display_board(board)
   else
     turn(board)
   end
+<<<<<<< HEAD
 end
 
 def turn_count(board)
@@ -134,4 +144,6 @@ def play(board)
   else
     puts "Congratulations #{winner(board)}!"
   end
+=======
+>>>>>>> 95e5e4506411bfa6c63bb7a71819dd635d0ae97e
 end
